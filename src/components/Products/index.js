@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from "react-reveal";
 import {
   ProductsContainer,
   ProductWrapper,
@@ -15,6 +16,7 @@ import {
 const Products = ({ heading, data }) => {
   return (
     <ProductsContainer>
+      <Fade>
       <ProductsHeading>{heading}</ProductsHeading>
       <ProductWrapper>
         {data.map((product, index) => {
@@ -31,6 +33,7 @@ const Products = ({ heading, data }) => {
           );
         })}
       </ProductWrapper>
+      </Fade>
     </ProductsContainer>
   );
 };

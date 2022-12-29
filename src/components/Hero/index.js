@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Navbar from '../Navbar';
 import Sidebar from '../Sidebar';
+import Fade from "react-reveal" ;
 import { 
     HeroContainer,
     HeroContent,
@@ -19,6 +20,7 @@ const Hero = () => {
 
     return (
         <HeroContainer>
+            <Fade clear>
             <Navbar toggle={toggle} />
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <HeroContent>
@@ -28,6 +30,7 @@ const Hero = () => {
                 <HeroBtn>Place Order </HeroBtn>
                 </HeroItems>
             </HeroContent>
+            </Fade>
         </HeroContainer>
     );
 };
